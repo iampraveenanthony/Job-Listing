@@ -1,0 +1,216 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(180, 52%, 96%);
+}
+
+header {
+  width: 100%;
+  background-color: hsl(180, 29%, 50%);
+  margin-bottom: 5rem;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.filters-section {
+  transform: translateY(-7rem);
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  background-color: white;
+  width: 80%;
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .filter {
+      display: flex;
+      align-items: center;
+
+      .filter-name {
+        background-color: hsl(180, 31%, 95%);
+        padding: 0.7rem;
+        color: hsl(180, 29%, 50%);
+        font-size: clamp(1rem, 0.9vw, 2rem);
+        font-weight: 700;
+      }
+
+      .filter-close {
+        padding: 0.7rem;
+        background-color: hsl(180, 29%, 50%);
+        cursor: pointer;
+        fill: white;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  .clear {
+    font-size: clamp(1rem, 1vw, 3rem);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 2rem;
+    padding: 4rem;
+    width: 80%;
+    box-shadow: 0px 2px 10px hsl(180, 8%, 52%);
+    border-left: 0.5rem solid transparent;
+    position: relative;
+
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+
+    &:hover {
+      border-left: 0.5rem solid hsl(180, 29%, 50%);
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+
+    .section__left {
+      display: flex;
+      gap: 2rem;
+      flex-grow: 1;
+
+      @media (max-width: 600px) {
+        padding-bottom: 2rem;
+        border-bottom: 1px gray solid;
+      }
+
+      &__image {
+        height: 100%;
+
+        @media (max-width: 600px) {
+          position: absolute;
+          height: 6.5rem;
+          top: -3rem;
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1.5rem;
+
+        &__top {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+
+          span {
+            font-weight: 700;
+            font-size: clamp(1rem, 0.7vw, 2rem);
+          }
+
+          .company-name {
+            color: hsl(180, 29%, 50%);
+          }
+
+          .new {
+            color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: hsl(180, 29%, 50%);
+          }
+
+          .featured {
+            padding: 1rem;
+            color: white;
+            border-radius: 1rem;
+            background-color: black;
+          }
+        }
+
+        &__middle {
+          span {
+            font-weight: 700;
+            font-size: clamp(1rem, 2vw, 3rem);
+            cursor: pointer;
+
+            &:hover {
+              color: hsl(180, 29%, 50%);
+            }
+          }
+        }
+
+        &__bot {
+          display: flex;
+          gap: 2rem;
+          flex-wrap: wrap;
+
+          span {
+            color: hsl(180, 8%, 52%);
+            font-size: clamp(1rem, 0.9vw, 2rem);
+          }
+
+          .span-bullet-point {
+            display: list-item;
+            list-style-type: disc;
+            list-style-position: inside;
+          }
+        }
+      }
+    }
+
+    .section__right {
+      display: flex;
+      align-items: center;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        li {
+          background-color: hsl(180, 31%, 95%);
+          padding: 1rem;
+          color: hsl(180, 29%, 50%);
+          font-size: clamp(1rem, 1vw, 2rem);
+          font-weight: 700;
+          cursor: pointer;
+
+          &:hover {
+            color: white;
+            background-color: hsl(180, 29%, 50%);
+          }
+        }
+      }
+    }
+  }
+}
